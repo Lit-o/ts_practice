@@ -1,9 +1,10 @@
 import React from 'react';
+import Item from './components/Item';
 
 const App = () => {
   return (
     <div>
-      Wake up, Neo...
+      <Item width='200px' height='250px'/>
     </div>
   );
 };
