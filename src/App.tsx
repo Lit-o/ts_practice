@@ -1,10 +1,10 @@
 import React from 'react';
-import Item from './components/Item';
+import Item, { VariantCollection } from './components/Item';
 
 const App = () => {
     return (
         <div>
-            <Item width='200px' height='250px'>
+            <Item width='200px' height='250px' variant={VariantCollection.bordered} onClick={(num)=>{alert(num)}}>
                 <button>Wake Up</button>
             </Item>
         </div>
