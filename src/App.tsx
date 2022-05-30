@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import EventsExample from './components/EventsExample';
 import Item, { VariantCollection } from './components/Item';
 import ItemList from './components/ItemList';
 import { IUser } from './types/types';
@@ -22,10 +23,12 @@ const App = () => {
 
     return (
         <div style={{background: 'black', height: '100vh'}}>
+            <EventsExample/>
             <Item width='200px' height='250px' variant={VariantCollection.bordered} onClick={(num)=>{alert(num)}}>
                 <button>Wake Up</button>
             </Item>
             <ItemList users={users}/>
+
         </div>
     );
 };
