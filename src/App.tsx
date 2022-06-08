@@ -6,7 +6,8 @@ import ItemList from './components/ItemList';
 import { IUser } from './types/types';
 
 const App = () => {
-    const [users, setUsers] = useState<IUser[]>([])
+    // const [users, setUsers] = useState<IUser[]>([])
+    const [users, setUsers] = useState<Array<IUser>>([])
 
     useEffect(()=>{
         fetchUsers()
@@ -28,7 +29,6 @@ const App = () => {
                 <button>Wake Up</button>
             </Item>
             <ItemList users={users}/>
-
         </div>
     );
 };

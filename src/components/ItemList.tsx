@@ -2,7 +2,8 @@ import React, { FC } from 'react';
 import { IUser } from '../types/types';
 
 interface ItemListProps {
-    users: IUser[]
+    // users: IUser[]
+    users: Array<IUser>
 }
 
 const ItemList: FC<ItemListProps> = ({users}) => {

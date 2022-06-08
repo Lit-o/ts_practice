@@ -3,14 +3,14 @@ import React, { FC, useRef, useState } from 'react';
 const EventsExample: FC = () => {
     const [value, setValue] = useState<string>("")
     const [isDrag, setIsDrag] = useState<boolean>(false)
-    const inputRef = useRef<HTMLInputElement>(null)
+    const inputRef = useRef<HTMLInputElement | null>(null)
 
 
     const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         setValue(e.target.value)
     }
     const clickHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
-        //@ts-ignore:next-line
+        // @ts-ignore:next-line
         alert(inputRef.current.value)
 
         // alert(inputRef.current?.value) with "?" doesn't work
